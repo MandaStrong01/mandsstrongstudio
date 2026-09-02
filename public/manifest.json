@@ -1,0 +1,21 @@
+{
+  "name": "MandaStrong Studio",
+  "short_name": "MandaStrong",
+  "description": "Cinema Intelligence Platform — 600+ AI filmmaking tools, 8K export, up to 3-hour films",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#e8c96d",
+  "orientation": "any",
+  "categories": ["entertainment", "productivity", "utilities"],
+  "lang": "en",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

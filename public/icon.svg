@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <rect width="512" height="512" fill="#000000"/>
+  <!-- Film frame corners -->
+  <rect x="32" y="32" width="40" height="40" fill="#e8c96d"/>
+  <rect x="440" y="32" width="40" height="40" fill="#e8c96d"/>
+  <rect x="32" y="440" width="40" height="40" fill="#e8c96d"/>
+  <rect x="440" y="440" width="40" height="40" fill="#e8c96d"/>
+  <!-- Gold border lines -->
+  <rect x="72" y="32" width="368" height="6" fill="#a07820"/>
+  <rect x="72" y="474" width="368" height="6" fill="#a07820"/>
+  <rect x="32" y="72" width="6" height="368" fill="#a07820"/>
+  <rect x="474" y="72" width="6" height="368" fill="#a07820"/>
+  <!-- M letterform — bold cinematic -->
+  <path d="M 110 360 L 110 160 L 180 280 L 256 160 L 332 280 L 402 160 L 402 360" stroke="#e8c96d" stroke-width="28" stroke-linecap="square" stroke-linejoin="miter" fill="none"/>
+  <!-- Underline accent -->
+  <rect x="110" y="380" width="292" height="8" fill="#e8c96d"/>
+  <!-- Gold dot accent -->
+  <circle cx="256" cy="410" r="8" fill="#e8c96d"/>
+</svg>

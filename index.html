@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <style>[data-bolt-badge],a[href*="bolt.new"],.bolt-badge,#bolt-badge,[class*="bolt-badge"],[id*="bolt-badge"],img[src*="bolt"],a[href*="bolt.new"] img,iframe[src*="bolt"]{display:none!important;visibility:hidden!important;opacity:0!important;width:0!important;height:0!important;pointer-events:none!important;}</style>
+    <script>
+      (function(){
+        var HIDE="display:none!important;visibility:hidden!important;opacity:0!important;width:0!important;height:0!important;position:absolute!important;left:-9999px!important;";
+        var SEL='[data-bolt-badge],[class*="bolt-badge"],[id*="bolt-badge"],a[href*="bolt.new"],bolt-ai-badge,[data-testid*="bolt"]';
+        function killBolt(){
+          document.querySelectorAll(SEL).forEach(function(el){el.style.cssText=HIDE;});
+          document.querySelectorAll('*').forEach(function(el){try{if(el.shadowRoot){el.shadowRoot.querySelectorAll(SEL).forEach(function(s){s.style.cssText=HIDE;});}}catch(e){}});
+        }
+        killBolt();
+        setInterval(killBolt,300);
+        var obs=new MutationObserver(killBolt);
+        document.addEventListener('DOMContentLoaded',function(){if(document.body){obs.observe(document.body,{childList:true,subtree:true,attributes:true});}killBolt();});
+      })();
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary Meta -->
+    <title>MandaStrong Studio — AI Cinema Platform</title>
+    <meta name="description" content="MandaStrong Studio: Professional AI filmmaking platform with 600+ tools. Generate cinematic videos, 54 AI voices, timeline editor, audio mixer, 8K export. Build real films from script to screen." />
+    <meta name="keywords" content="AI filmmaking, video generator, text to video, AI voice, music video creator, cinematic AI, film studio, MandaStrong" />
+    <meta name="author" content="MandaStrong Studio" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Icons -->
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+    <link rel="apple-touch-icon" href="/icon.svg" />
+
+    <!-- PWA / Mobile -->
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#e8c96d" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="MandaStrong" />
+    <meta name="mobile-web-app-capable" content="yes" />
+
+    <!-- Open Graph (Facebook / LinkedIn / WhatsApp) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="MandaStrong Studio — AI Cinema Platform" />
+    <meta property="og:description" content="600+ AI filmmaking tools. Generate cinematic videos, 54 AI voices, timeline editor, audio mixer, 8K export. Build real films from script to screen." />
+    <meta property="og:image" content="/icon.svg" />
+    <meta property="og:site_name" content="MandaStrong Studio" />
+
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="MandaStrong Studio — AI Cinema Platform" />
+    <meta name="twitter:description" content="600+ AI filmmaking tools. Generate cinematic videos, 54 AI voices, 8K export. Build real films from script to screen." />
+    <meta name="twitter:image" content="/icon.svg" />
+
+    <!-- Google Fonts — loaded here so they're in the HTML head, not injected by JS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
